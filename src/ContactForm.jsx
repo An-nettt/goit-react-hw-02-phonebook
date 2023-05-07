@@ -25,7 +25,10 @@ export default class ContactForm extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     console.log(this.state);
+    this.props.onSubmit(this.state);
+    // this.setState({this.state.reset});
   };
+
   render() {
     return (
       <PhonebookWrapper onSubmit={this.handleSubmit}>

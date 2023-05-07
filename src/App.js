@@ -17,6 +17,21 @@ export default class App extends Component {
     filter: '',
   };
 
+  addToContacts = ({ id, name, number }) => {
+    console.log(id, name, number);
+
+    const newContact = {
+      id,
+      name,
+      number,
+    };
+    console.log(newContact);
+
+    this.setState((prevState) => ({
+      contacts: [newContact, ...prevState.contacts],
+    }));
+  };
+
   // deleteContact = (id) => {
   //   this.setState((prevState) => ({
   //     contacts: prevState.contacts.filter((contact) => id !== id),
@@ -28,7 +43,7 @@ export default class App extends Component {
     return (
       <Wrapper>
         <h1>Phonebook</h1>
-        <ContactForm />
+        <ContactForm onSubmit={this.addToContacts} />
 
         <Title>Contacts</Title>
         <Filter />
