@@ -13,7 +13,6 @@ export const PhonebookWrapper = styled.form`
 
 export const Text = styled.p`
   font-size: 20px;
-  /* font-weight: 700; */
   margin-bottom: 10px;
   margin-top: 0;
 `;
@@ -28,7 +27,6 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  display: flex;
   padding: 10px 15px 10px 15px;
   border: 1px solid black;
   border-radius: 5px;
@@ -43,4 +41,25 @@ export const Title = styled.h2`
   padding-left: 20px;
   font-weight: 700;
   font-size: 22px;
+`;
+
+export const ContactListWrapper = styled.ul`
+  margin-left: 20px;
+  padding: 20px 10px;
+`;
+
+export const ContactListEl = styled.li`
+  display: flex;
+  align-items: center;
+`;
+
+export const ButtonDel = styled.button`
+  align-items: center;
+  height: 20px;
+  margin-left: 10px;
+  background-color: #fff;
+  border: 1px solid #d4d4d4;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 500;
 `;

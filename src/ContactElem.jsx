@@ -5,6 +5,10 @@ import {} from './styled';
 
 export default class ContactElem extends Component {
   render() {
-    return <div></div>;
+    return (
+      <div>
+        <p>Find contacts by name</p>
+      </div>
+    );
   }
 }

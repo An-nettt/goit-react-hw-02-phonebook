@@ -2,7 +2,7 @@ import { Component } from 'react';
 
 import ContactForm from './ContactForm';
 import { ContactList } from './ContactList';
-import { Filter } from './Filter';
+import Filter from './Filter';
 
 import { Wrapper, Title } from './styled';
 
@@ -18,14 +18,11 @@ export default class App extends Component {
   };
 
   addToContacts = ({ id, name, number }) => {
-    console.log(id, name, number);
-
     const newContact = {
       id,
       name,
       number,
     };
-    console.log(newContact);
 
     this.setState((prevState) => ({
       contacts: [newContact, ...prevState.contacts],
