@@ -7,6 +7,11 @@ import { Filter } from './Filter';
 import { Wrapper } from './styled';
 
 export default class App extends Component {
+  // state = {
+  //   contacts: [],
+  //   name: '',
+  // };
+
   render() {
     return (
       <Wrapper>
