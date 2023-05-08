@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { ContactListWrapper, ContactListEl, ButtonDel } from './styled';
+import { ContactListWrapper, ContactListEl, Text, ButtonDel } from './styled';
 
 export const ContactList = ({ contacts, onDeleteContact }) => {
   return (
@@ -7,9 +7,9 @@ export const ContactList = ({ contacts, onDeleteContact }) => {
       {contacts.map(({ id, name, number }) => (
         <>
           <ContactListEl key={id.id}>
-            <p>
+            <Text>
               {name} : {number}
-            </p>
+            </Text>
             <ButtonDel type="button" onClick={() => onDeleteContact(id)}>
               Delete
             </ButtonDel>

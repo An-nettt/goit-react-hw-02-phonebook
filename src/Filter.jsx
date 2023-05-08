@@ -1,15 +1,15 @@
 import { Component } from 'react';
 // import PropTypes from 'prop-types';
 
-import { Text } from './styled';
+import { FilterWrapper, Text, Input } from './styled';
 
 export default class Filter extends Component {
   render() {
     return (
-      <div>
+      <FilterWrapper>
         <Text>Find contacts by name</Text>
-        <input></input>
-      </div>
+        <Input></Input>
+      </FilterWrapper>
     );
   }
 }
