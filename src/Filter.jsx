@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import { FilterWrapper, Text, Input } from './styled';
 
@@ -11,6 +11,6 @@ export const Filter = ({ value, onChange }) => {
   );
 };
 
-// Filter.propTypes = {
-//   title: PropTypes.string.isRequired,
-// };
+Filter.propTypes = {
+  value: PropTypes.string.isRequired,
+};

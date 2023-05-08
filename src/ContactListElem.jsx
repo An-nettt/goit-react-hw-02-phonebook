@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { ContactListEl, Text, ButtonDel } from './styled';
 
 export const ContactListElem = ({ contactsEl, onDeleteContact }) => {
@@ -16,8 +16,4 @@ export const ContactListElem = ({ contactsEl, onDeleteContact }) => {
   );
 };
 
-ContactListElem.propTypes = {
-  id: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  number: PropTypes.number.isRequired,
-};
+// ContactListElem.propTypes = {};
