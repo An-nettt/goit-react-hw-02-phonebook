@@ -24,10 +24,7 @@ export default class ContactForm extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    if (event.target[0].name === this.state.name) {
-      alert(`${this.state.name} is already in contacts.`);
-      return event.currentTarget.reset();
-    }
+
     this.props.onSubmit(this.state);
     event.currentTarget.reset();
   };

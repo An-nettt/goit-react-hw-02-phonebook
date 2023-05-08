@@ -23,10 +23,17 @@ export default class App extends Component {
       name,
       number,
     };
+    const auditContacts = this.state.contacts.filter((contact) =>
+      contact.name.includes(newContact.name)
+    );
 
-    this.setState((prevState) => ({
-      contacts: [newContact, ...prevState.contacts],
-    }));
+    if (auditContacts.length === 0) {
+      this.setState((prevState) => ({
+        contacts: [newContact, ...prevState.contacts],
+      }));
+    } else {
+      alert(`${newContact.name} is already in contacts.`);
+    }
   };
 
   changeFilter = (event) => {
