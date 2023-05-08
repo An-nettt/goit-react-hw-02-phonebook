@@ -42,11 +42,11 @@ export default class App extends Component {
     );
   };
 
-  // deleteContact = (id) => {
-  //   this.setState((prevState) => ({
-  //     contacts: prevState.contacts.filter((contact) => id !== id),
-  //   }));
-  // };
+  deleteContact = (id) => {
+    this.setState((prevState) => ({
+      contacts: prevState.contacts.filter((contact) => contact.id !== id),
+    }));
+  };
 
   render() {
     const { filter } = this.state;
@@ -58,10 +58,11 @@ export default class App extends Component {
 
         <ContactsTitle>Contacts</ContactsTitle>
         <Filter value={filter} onChange={this.changeFilter} />
-        <ContactList contacts={filterContacts} />
+        <ContactList
+          contacts={filterContacts}
+          onDeleteContact={this.deleteContact}
+        />
       </Wrapper>
     );
   }
 }
-
-// onDeleteContact={this.deleteContact}
