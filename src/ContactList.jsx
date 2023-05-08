@@ -1,10 +1,10 @@
 import { ContactListElem } from './ContactListElem';
 import { ContactListWrapper } from './styled';
 
-export const ContactList = () => {
+export const ContactList = (contacts) => {
   return (
     <ContactListWrapper>
-      <ContactListElem />
+      <ContactListElem contacts={contacts} />
     </ContactListWrapper>
   );
 };

@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
-
 import { ContactListEl, Text, ButtonDel } from './styled';
 
 export const ContactListElem = ({ contacts, onDeleteContact }) => {
+  console.log(contacts);
   return (
     <>
       {contacts.map(({ id, name, number }) => (
-        <ContactListEl key={id.id}>
+        <ContactListEl key={id}>
           <Text>
             {name} : {number}
           </Text>
