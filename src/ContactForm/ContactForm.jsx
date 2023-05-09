@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
-import { nanoid } from 'nanoid';
-import { PhonebookWrapper, Text, Input, Button } from './styled';
+
+import { PhonebookForm, Text, Input, Button } from '../styled';
 
 export default class ContactForm extends Component {
   state = {
@@ -12,12 +12,6 @@ export default class ContactForm extends Component {
   addContact = (event) => {
     this.setState({
       name: event.target.value,
-      id: nanoid(),
-    });
-  };
-
-  addNumber = (event) => {
-    this.setState({
       number: event.target.value,
     });
   };
@@ -31,7 +25,7 @@ export default class ContactForm extends Component {
 
   render() {
     return (
-      <PhonebookWrapper onSubmit={this.handleSubmit}>
+      <PhonebookForm onSubmit={this.handleSubmit}>
         <Text>Name</Text>
         <Input
           type="text"
@@ -45,13 +39,13 @@ export default class ContactForm extends Component {
         <Input
           type="tel"
           name={this.state.number}
-          onChange={this.addNumber}
+          onChange={this.addContact}
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
         />
         <Button type="submit">Add contact</Button>
-      </PhonebookWrapper>
+      </PhonebookForm>
     );
   }
 }

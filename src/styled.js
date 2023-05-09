@@ -14,7 +14,7 @@ export const Title = styled.h1`
   font-size: 30px;
 `;
 
-export const PhonebookWrapper = styled.form`
+export const PhonebookForm = styled.form`
   margin: 20px;
   padding: 0px 10px 15px 10px;
   border: 1px solid black;

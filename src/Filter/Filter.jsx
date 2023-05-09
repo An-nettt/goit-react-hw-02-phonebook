@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-import { FilterWrapper, Text, Input } from './styled';
+import { FilterWrapper, Text, Input } from '../styled';
 
 export const Filter = ({ value, onChange }) => {
   return (
