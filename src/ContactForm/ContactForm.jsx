@@ -9,16 +9,18 @@ export default class ContactForm extends Component {
   };
 
   addContact = (event) => {
+    console.log(event.target.name);
+    console.log(event.target.value);
     this.setState({
-      name: event.target.value,
+      [event.target.name]: event.target.value,
     });
   };
 
-  addNumber = (event) => {
-    this.setState({
-      number: event.target.value,
-    });
-  };
+  // addNumber = (event) => {
+  //   this.setState({
+  //     number: event.target.value,
+  //   });
+  // };
 
   handleSubmit = (event) => {
     event.preventDefault();
@@ -43,7 +45,7 @@ export default class ContactForm extends Component {
         <Input
           type="tel"
           name={this.state.number}
-          onChange={this.addNumber}
+          onChange={this.addContact}
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
