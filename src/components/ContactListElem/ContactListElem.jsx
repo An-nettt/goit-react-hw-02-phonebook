@@ -1,4 +1,4 @@
-import { ContactListEl, Text, ButtonDel } from '../styled';
+import { ContactListEl, Text, ButtonDel } from '../../styled';
 
 const ContactListElem = ({ contactsEl, onDeleteContact }) => {
   return (
