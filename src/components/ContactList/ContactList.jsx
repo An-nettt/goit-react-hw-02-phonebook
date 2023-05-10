@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-import { ContactListElem } from '../ContactListElem/ContactListElem';
-import { ContactListWrapper } from '../styled';
+import ContactListElem from '../ContactListElem';
+import { ContactListWrapper } from '../../styled';
 
-export const ContactList = ({ contacts, onDeleteContact }) => {
+const ContactList = ({ contacts, onDeleteContact }) => {
   return (
     <ContactListWrapper>
       {contacts.map(({ id, name, number }) => (
@@ -14,6 +14,8 @@ export const ContactList = ({ contacts, onDeleteContact }) => {
     </ContactListWrapper>
   );
 };
+
+export default ContactList;
 
 ContactList.propTypes = {
   contactsArrayOf: PropTypes.arrayOf(PropTypes.string),

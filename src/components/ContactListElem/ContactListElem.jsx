@@ -1,6 +1,6 @@
 import { ContactListEl, Text, ButtonDel } from '../styled';
 
-export const ContactListElem = ({ contactsEl, onDeleteContact }) => {
+const ContactListElem = ({ contactsEl, onDeleteContact }) => {
   return (
     <>
       <ContactListEl>
@@ -14,3 +14,5 @@ export const ContactListElem = ({ contactsEl, onDeleteContact }) => {
     </>
   );
 };
+
+export default ContactListElem;

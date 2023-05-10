@@ -1,26 +1,24 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
-import { PhonebookForm, Text, Input, Button } from '../styled';
+import { PhonebookForm, Text, Input, Button } from '../../styled';
 
-export default class ContactForm extends Component {
+class ContactForm extends Component {
   state = {
     name: '',
     number: '',
   };
 
   addContact = (event) => {
-    console.log(event.target.name);
-    console.log(event.target.value);
     this.setState({
-      [event.target.name]: event.target.value,
+      name: event.target.value,
     });
   };
 
-  // addNumber = (event) => {
-  //   this.setState({
-  //     number: event.target.value,
-  //   });
-  // };
+  addNumber = (event) => {
+    this.setState({
+      number: event.target.value,
+    });
+  };
 
   handleSubmit = (event) => {
     event.preventDefault();
@@ -45,7 +43,7 @@ export default class ContactForm extends Component {
         <Input
           type="tel"
           name={this.state.number}
-          onChange={this.addContact}
+          onChange={this.addNumber}
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
@@ -55,6 +53,8 @@ export default class ContactForm extends Component {
     );
   }
 }
+
+export default ContactForm;
 
 ContactForm.propTypes = {
   name: PropTypes.string,
